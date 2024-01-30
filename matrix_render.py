@@ -35,11 +35,13 @@ while running==True:
 
             if event.button == 1:
                 if pygame.mouse.get_focused():
+                    pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_SIZEALL)
                     pygame.mouse.get_rel()
                     dragging = True
 
         if event.type == pygame.MOUSEBUTTONUP:
             if event.button == 1:
+                pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
                 dragging = False
 
 
